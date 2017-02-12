@@ -105,7 +105,7 @@ public class ConsoleExample {
 
     public static void scan() {
 
-        vHackAPI api = new vHackAPIBuilder().password("f3rn4nd0").username("yannice92").getAPI();
+        vHackAPI api = new vHackAPIBuilder().password("pass").username("user").getAPI();
         //Get an IP trougth console
         ArrayList<String> ips = api.getConsole().getIP(false, false);
         //Scan the IP
@@ -114,7 +114,7 @@ public class ConsoleExample {
             for (int i = 0; i < ips.size(); i++) {
                 ScannedNode scanned = api.getConsole().scanIP(ips.get(i));
 
-                if (scanned.getSuccessRate() >= 80) {
+                if (scanned.getSuccessRate() >= 70) {
                     //if the success rate is bigger or equals 70 then transfer trojan
                     TransferResult transfer = api.getConsole().transferTrojanTo(scanned);
                     Random rand = new Random();
