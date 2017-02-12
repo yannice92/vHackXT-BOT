@@ -105,7 +105,7 @@ public class ConsoleExample {
 
     public static void scan() {
 
-        vHackAPI api = new vHackAPIBuilder().password("f3rn4nd0").username("yannice92").getAPI();
+        vHackAPI api = new vHackAPIBuilder().password("pass").username("user").getAPI();
         //Get an IP trougth console
         ArrayList<String> ips = api.getConsole().getIP(false, false);
         //Scan the IP
